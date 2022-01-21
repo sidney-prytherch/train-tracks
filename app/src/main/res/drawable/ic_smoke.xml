@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50dp"
+    android:height="75dp"
+    android:viewportWidth="50"
+    android:viewportHeight="75">
+  <group
+      android:name="smokeGroup1">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,6q6,-3 6,1q4,-3 3,2q6,-2 6,4q0,4 -5,4q-3,5 -5,2q-2,3 -6,-1q-4,1 -4,-4q-3,-3 0,-5Q0,1 7,6q6,-3 6,1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup2">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q3,-3 6,1q2,-3 4,2q6,-2 3,6q2,4 -2,3q-2,5 -5,2q-4,2 -6,-1q-3,0 -4,-4q-5,-2 0,-5Q1,7 7,10q3,-3 6,1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup3">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q2,-4 4,-2q3,-3 5,1q4,0 2,4q4,3 0,4q-1,4 -4,2q-6,4 -7,-1q-4,0 -2,-3Q2,8 7,10q2,-4 4,-2"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup4">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q1,-2 2,-1q2,-4 5,1q5,-2 4,3q3,2 0,5q-1,4 -4,2q-3,3 -5,0q-5,0 -3,-4q-3,-3 -1,-4Q4,9 7,10q1,-2 2,-1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup5">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,6q6,-3 6,1q4,-3 3,2q6,-2 6,4q0,4 -5,4q-3,5 -5,2q-2,3 -6,-1q-4,1 -4,-4q-3,-3 0,-5Q0,1 7,6q6,-3 6,1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup6">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q3,-3 6,1q2,-3 4,2q6,-2 3,6q2,4 -2,3q-2,5 -5,2q-4,2 -6,-1q-3,0 -4,-4q-5,-2 0,-5Q1,7 7,10q3,-3 6,1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup7">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q2,-4 4,-2q3,-3 5,1q4,0 2,4q4,3 0,4q-1,4 -4,2q-6,4 -7,-1q-4,0 -2,-3Q2,8 7,10q2,-4 4,-2"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+
+  <group
+      android:name="smokeGroup8">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M7,10q1,-2 2,-1q2,-4 5,1q5,-2 4,3q3,2 0,5q-1,4 -4,2q-3,3 -5,0q-5,0 -3,-4q-3,-3 -1,-4Q4,9 7,10q1,-2 2,-1"
+      android:fillColor="#ffffff"
+      android:strokeColor="#808080"/>
+  </group>
+</vector>

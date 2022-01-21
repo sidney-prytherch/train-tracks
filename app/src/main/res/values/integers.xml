@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="transition_delay">1500</integer>
+    <integer name="animation_long">2900</integer>
+    <integer name="smoke1_delay">1600</integer>
+    <integer name="smoke2_delay">1750</integer>
+    <integer name="smoke3_delay">1900</integer>
+    <integer name="smoke4_delay">2050</integer>
+    <integer name="smoke5_delay">2200</integer>
+    <integer name="smoke6_delay">2350</integer>
+    <integer name="smoke7_delay">2500</integer>
+    <integer name="smoke8_delay">2650</integer>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_smoke">
+    <target
+        android:name="smokeGroup1"
+        android:animation="@animator/smoke_movement1"/>
+
+    <target
+        android:name="smokeGroup2"
+        android:animation="@animator/smoke_movement2"/>
+
+    <target
+        android:name="smokeGroup3"
+        android:animation="@animator/smoke_movement3"/>
+
+    <target
+        android:name="smokeGroup4"
+        android:animation="@animator/smoke_movement4"/>
+
+    <target
+        android:name="smokeGroup5"
+        android:animation="@animator/smoke_movement5"/>
+
+    <target
+        android:name="smokeGroup6"
+        android:animation="@animator/smoke_movement6"/>
+
+    <target
+        android:name="smokeGroup7"
+        android:animation="@animator/smoke_movement7"/>
+
+    <target
+        android:name="smokeGroup8"
+        android:animation="@animator/smoke_movement8"/>
+</animated-vector>

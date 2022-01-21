@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_train_with_carriage">
+    <target
+        android:name="rotateGroup"
+        android:animation="@animator/train_rotation"/>
+    <target
+        android:name="antiRotateGroup"
+        android:animation="@animator/train_anti_rotation"/>
+    <target
+        android:name="translationGroup"
+        android:animation="@animator/train_translation"/>
+<!--    <target-->
+<!--        android:name="rotateGroup2"-->
+<!--        android:animation="@animator/train_rotation"/>-->
+<!--    <target-->
+<!--        android:name="antiRotateGroup2"-->
+<!--        android:animation="@animator/train_anti_rotation"/>-->
+</animated-vector>
