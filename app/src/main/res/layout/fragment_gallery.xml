@@ -42,14 +42,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/smoke_image1"
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/grid_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
+        android:padding="50dp">
+
+        <View
+            android:id="@+id/gridFrame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/smoke_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
         app:layout_constraintDimensionRatio="2:3"
         app:layout_constraintBottom_toTopOf="@id/empty_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/animated_smoke1" />
+        app:srcCompat="@drawable/animated_smoke1"
+        android:contentDescription="@string/del" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.sid.app.traintracks.ui.home
 
 import android.graphics.drawable.Animatable
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

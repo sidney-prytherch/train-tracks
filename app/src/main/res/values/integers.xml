@@ -2,6 +2,8 @@
 <resources>
     <integer name="transition_delay">1500</integer>
     <integer name="animation_long">2900</integer>
+    <integer name="animation_short">600</integer>
+    <integer name="animation_very_long">4000</integer>
     <integer name="smoke1_delay">1600</integer>
     <integer name="smoke2_delay">1750</integer>
     <integer name="smoke3_delay">1900</integer>
