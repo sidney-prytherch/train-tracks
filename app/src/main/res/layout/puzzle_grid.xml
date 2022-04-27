@@ -1,9 +1,18 @@
-<ImageView
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_no_track"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:scaleType="fitCenter"
-    android:layout_gravity="center"
-    android:adjustViewBounds="true"
-    android:id="@+id/camera" />
+    android:gravity="center_vertical"
+    android:padding="1dp">
+<!--    android:layout_marginLeft="@dimen/margin_medium"-->
+<!--    android:layout_marginRight="@dimen/margin_medium"-->
+
+    <ImageView
+        android:src="@drawable/ic_no_track"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageView" />
+</FrameLayout>

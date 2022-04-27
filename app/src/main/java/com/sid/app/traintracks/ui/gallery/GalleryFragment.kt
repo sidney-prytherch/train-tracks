@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.sid.app.traintracks.databinding.FragmentGalleryBinding
 import com.sid.app.traintracks.R
@@ -98,7 +99,8 @@ class GalleryFragment : Fragment() {
                 .setListener(null)
         }
 
-        binding.gridLayout.adapter = GridAdapter()
+        binding.gridLayout.layoutManager = GridLayoutManager(context, 8)
+        binding.gridLayout.adapter = GridAdapter(Array(64){R.drawable.ic_straight_track_vertical})
 
         val puzzle = Puzzle()
         puzzle.generateMaze(8)

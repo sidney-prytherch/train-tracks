@@ -37,6 +37,38 @@
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/fragment_home.xml" value="0.22314814814814815" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_grid.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_row.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/button_back.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/button_corner_track_NE.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_corner_track_NW.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_corner_track_SE.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_corner_track_SW.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_corner_track_ne.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/button_corner_track_nw.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/button_corner_track_se.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/button_corner_track_sw.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/button_no_track.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_straight_track_horizontal.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_straight_track_vertical.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/clear.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_corner_track.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_ne.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_ne_selected.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_se.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_se_selected.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_selected.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_sw.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_sw_selected.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_no_track.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_no_track_button.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_no_track_selected.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_straight_track.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_straight_track_horizontal.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_straight_track_horizontal_selected.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_straight_track_selected.xml" value="0.2155" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/puzzle_grid.xml" value="0.18026428222656252" />
+        <entry key="app/src/main/res/layout/puzzle_row.xml" value="0.20833333333333334" />
       </map>
     </option>
   </component>
