@@ -99,8 +99,37 @@ class GalleryFragment : Fragment() {
                 .setListener(null)
         }
 
+        val adapter = GridAdapter(Array(64){R.drawable.ic_no_track})
         binding.gridLayout.layoutManager = GridLayoutManager(context, 8)
-        binding.gridLayout.adapter = GridAdapter(Array(64){R.drawable.ic_straight_track_vertical})
+        binding.gridLayout.adapter = adapter
+
+        binding.delete.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_no_track_selected)
+        }
+
+        binding.cornerNE.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_corner_track_ne_selected)
+        }
+
+        binding.cornerNW.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_corner_track_nw_selected)
+        }
+
+        binding.cornerSW.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_corner_track_sw_selected)
+        }
+
+        binding.cornerSE.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_corner_track_se_selected)
+        }
+
+        binding.straightHorizontal.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_straight_track_horizontal_selected)
+        }
+
+        binding.straightVertical.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_straight_track_vertical_selected)
+        }
 
         val puzzle = Puzzle()
         puzzle.generateMaze(8)

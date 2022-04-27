@@ -98,84 +98,98 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_no_track"
         app:layout_constraintTop_toBottomOf="@id/gridLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/corner_NE"
         app:layout_constraintEnd_toStartOf="@id/straight_vertical"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
-    <Button
+    <ImageButton
         android:id="@+id/straight_vertical"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_straight_track_vertical"
+        android:src="@drawable/button_straight_track_vertical"
         app:layout_constraintTop_toBottomOf="@id/gridLayout"
         app:layout_constraintStart_toEndOf="@id/delete"
         app:layout_constraintBottom_toTopOf="@id/corner_NE"
         app:layout_constraintEnd_toStartOf="@id/straight_horizontal"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
     <ImageButton
         android:id="@+id/straight_horizontal"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_straight_track_horizontal"
         app:layout_constraintTop_toBottomOf="@id/gridLayout"
         app:layout_constraintStart_toEndOf="@id/straight_vertical"
         app:layout_constraintBottom_toTopOf="@id/corner_NE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
     <ImageButton
         android:id="@+id/corner_NE"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_corner_track_ne"
         app:layout_constraintTop_toBottomOf="@id/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/corner_SE"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
     <ImageButton
         android:id="@+id/corner_SE"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_corner_track_se"
         app:layout_constraintTop_toBottomOf="@id/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/corner_SW"
         app:layout_constraintEnd_toStartOf="@id/corner_NE"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
     <ImageButton
         android:id="@+id/corner_SW"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_corner_track_sw"
         app:layout_constraintTop_toBottomOf="@id/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/corner_SE"
         app:layout_constraintEnd_toStartOf="@id/corner_NW"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
     <ImageButton
         android:id="@+id/corner_NW"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1"
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/button_corner_track_nw"
         app:layout_constraintTop_toBottomOf="@id/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/corner_SW"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".2" />
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintWidth_percent=".15" />
 
 
 
