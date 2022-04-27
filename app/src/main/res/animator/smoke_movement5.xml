@@ -12,7 +12,7 @@
         android:interpolator="@android:anim/accelerate_decelerate_interpolator"
         android:propertyName="translateX"
         android:valueFrom="18"
-        android:valueTo="10" />
+        android:valueTo="3" />
     <objectAnimator
         android:duration="1500"
         android:startOffset="@integer/smoke5_delay"

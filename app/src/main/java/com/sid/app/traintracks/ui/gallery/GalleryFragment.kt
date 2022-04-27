@@ -40,9 +40,9 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        galleryViewModel.text.observe(viewLifecycleOwner, {
+        galleryViewModel.text.observe(viewLifecycleOwner) {
             binding.textGallery.text = it
-        })
+        }
 
         val animR: AnimatedVectorDrawableCompat? = AnimatedVectorDrawableCompat.create(binding.trainImage.context, R.drawable.animated_train)
         animR?.let {
@@ -81,7 +81,7 @@ class GalleryFragment : Fragment() {
         binding.smokeImage
             .animate()
             .alpha(0f)
-            .setDuration(veryLongAnimation)
+            .setDuration(longAnimation)
             .setStartDelay(veryLongAnimation)
             .setListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
@@ -94,15 +94,18 @@ class GalleryFragment : Fragment() {
             animate()
                 .alpha(1f)
                 .setDuration(shortAnimation)
-                .setStartDelay(longAnimation)
+                .setStartDelay(veryLongAnimation)
                 .setListener(null)
         }
 
-        val puzzle = Puzzle(5)
-        puzzle.fill()
+        binding.gridLayout.adapter = GridAdapter()
+
+        val puzzle = Puzzle()
+        puzzle.generateMaze(8)
 
 
         return root
+
     }
 
     override fun onDestroyView() {

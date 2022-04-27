@@ -12,10 +12,16 @@
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/animated_smoke6.xml" value="0.2703125" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/animated_train.xml" value="0.2361111111111111" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/clear.xml" value="0.2657407407407407" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_corner_track.xml" value="0.1245" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_corner_track_selected.xml" value="0.1245" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2361111111111111" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2703125" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_no_track.xml" value="0.1245" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_no_track_selected.xml" value="0.1245" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_smoke.xml" value="0.2703125" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_smoke1.xml" value="0.2703125" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_straight_track.xml" value="0.1245" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_straight_track_selected.xml" value="0.1245" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_train.xml" value="0.2703125" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_train100.xml" value="0.2703125" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/drawable/ic_train2.xml" value="0.264" />
@@ -27,8 +33,10 @@
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/activity_main.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/app_bar_main.xml" value="0.14947916666666666" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/content_main.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/fragment_gallery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/fragment_gallery.xml" value="0.2" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/fragment_home.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_grid.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_row.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
