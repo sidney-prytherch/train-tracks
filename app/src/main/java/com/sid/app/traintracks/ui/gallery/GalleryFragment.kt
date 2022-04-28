@@ -99,12 +99,12 @@ class GalleryFragment : Fragment() {
                 .setListener(null)
         }
 
-        val adapter = GridAdapter(Array(64){R.drawable.ic_no_track})
+        val adapter = GridAdapter(Array(64){R.drawable.ic_blank_track})
         binding.gridLayout.layoutManager = GridLayoutManager(context, 8)
         binding.gridLayout.adapter = adapter
 
         binding.delete.setOnClickListener {
-            adapter.setTrackDrawable(R.drawable.ic_no_track_selected)
+            adapter.setTrackDrawable(R.drawable.ic_blank_track_selected)
         }
 
         binding.cornerNE.setOnClickListener {

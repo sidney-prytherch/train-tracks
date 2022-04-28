@@ -6,18 +6,8 @@
   <path
       android:pathData="M0,0h100v100h-100z"
       android:fillColor="#ffffff"/>
-  <group
-      android:translateX="50"
-      android:translateY="-20.711"
-      android:rotation="45">
-    <path
-        android:fillColor="@color/tracks"
-        android:pathData="M42,20h16v60h-16z"/>
-    <path
-        android:fillColor="@color/tracks"
-        android:pathData="M20,42h60v16h-60z"/>
-  </group>
   <path
+      android:fillColor="#FF000000"
       android:pathData="M0,0h100v100h-100z"
       android:strokeAlpha="0.5"
       android:strokeWidth="10"

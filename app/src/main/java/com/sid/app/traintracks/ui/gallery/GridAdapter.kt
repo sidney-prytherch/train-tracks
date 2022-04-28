@@ -9,30 +9,31 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sid.app.traintracks.R
 
 
-class GridAdapter(private val mDataSet: Array<Int>) : RecyclerView.Adapter<GridAdapter.ViewHolder>() {
+class GridAdapter(private val mDataSet: Array<Int>) :
+    RecyclerView.Adapter<GridAdapter.ViewHolder>() {
 
-    var selectedPosition : Int? = null
-    val selectedToUnselectedDrawable = mapOf(
-        R.drawable.ic_no_track_selected to R.drawable.ic_no_track,
+    var selectedPosition: Int? = null
+    private val selectedToUnselectedDrawable = mapOf(
+        R.drawable.ic_blank_track_selected to R.drawable.ic_blank_track,
         R.drawable.ic_straight_track_horizontal_selected to R.drawable.ic_straight_track_horizontal,
         R.drawable.ic_straight_track_vertical_selected to R.drawable.ic_straight_track_vertical,
         R.drawable.ic_corner_track_ne_selected to R.drawable.ic_corner_track_ne,
         R.drawable.ic_corner_track_nw_selected to R.drawable.ic_corner_track_nw,
         R.drawable.ic_corner_track_se_selected to R.drawable.ic_corner_track_se,
-        R.drawable.ic_corner_track_sw_selected to R.drawable.ic_corner_track_sw,
+        R.drawable.ic_corner_track_sw_selected to R.drawable.ic_corner_track_sw
     )
-    val unselectedToSelectedDrawable = mapOf(
-        R.drawable.ic_no_track to R.drawable.ic_no_track_selected,
+    private val unselectedToSelectedDrawable = mapOf(
+        R.drawable.ic_blank_track to R.drawable.ic_blank_track_selected,
         R.drawable.ic_straight_track_horizontal to R.drawable.ic_straight_track_horizontal_selected,
         R.drawable.ic_straight_track_vertical to R.drawable.ic_straight_track_vertical_selected,
         R.drawable.ic_corner_track_ne to R.drawable.ic_corner_track_ne_selected,
         R.drawable.ic_corner_track_nw to R.drawable.ic_corner_track_nw_selected,
         R.drawable.ic_corner_track_se to R.drawable.ic_corner_track_se_selected,
-        R.drawable.ic_corner_track_sw to R.drawable.ic_corner_track_sw_selected,
+        R.drawable.ic_corner_track_sw to R.drawable.ic_corner_track_sw_selected
     )
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        val imageView : ImageView
+        val imageView: ImageView
 
         init {
             // Define click listener for the ViewHolder's View.

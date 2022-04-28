@@ -38,6 +38,7 @@
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_grid.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/prytherchs/AndroidStudioProjects/traintracks/app/src/main/res/layout/puzzle_row.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/button_back.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/button_blank_track.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/button_corner_track_NE.xml" value="0.2045" />
         <entry key="app/src/main/res/drawable/button_corner_track_NW.xml" value="0.2045" />
         <entry key="app/src/main/res/drawable/button_corner_track_SE.xml" value="0.2045" />
@@ -46,25 +47,44 @@
         <entry key="app/src/main/res/drawable/button_corner_track_nw.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/button_corner_track_se.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/button_corner_track_sw.xml" value="0.2155" />
-        <entry key="app/src/main/res/drawable/button_no_track.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_east_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/button_no_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/button_north_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/button_south_track.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/button_straight_track_horizontal.xml" value="0.2045" />
         <entry key="app/src/main/res/drawable/button_straight_track_vertical.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/button_west_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/button_yes_track.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/clear.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_blank_track.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_blank_track_selected.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/ic_corner_track.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_corner_track_ne.xml" value="0.199" />
         <entry key="app/src/main/res/drawable/ic_corner_track_ne_selected.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_corner_track_nw.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_corner_track_se.xml" value="0.199" />
         <entry key="app/src/main/res/drawable/ic_corner_track_se_selected.xml" value="0.199" />
         <entry key="app/src/main/res/drawable/ic_corner_track_selected.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_corner_track_sw.xml" value="0.199" />
         <entry key="app/src/main/res/drawable/ic_corner_track_sw_selected.xml" value="0.199" />
-        <entry key="app/src/main/res/drawable/ic_no_track.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_east_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_east_track_selected.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_no_track.xml" value="0.19918463134765627" />
         <entry key="app/src/main/res/drawable/ic_no_track_button.xml" value="0.2045" />
         <entry key="app/src/main/res/drawable/ic_no_track_selected.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_north_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_north_track_selected.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_south_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_south_track_selected.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/ic_straight_track.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_straight_track_horizontal.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_straight_track_horizontal_selected.xml" value="0.2155" />
         <entry key="app/src/main/res/drawable/ic_straight_track_selected.xml" value="0.2155" />
+        <entry key="app/src/main/res/drawable/ic_track_cross.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable/ic_west_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_west_track_selected.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_yes_track.xml" value="0.242" />
+        <entry key="app/src/main/res/drawable/ic_yes_track_selected.xml" value="0.242" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.26528371175130194" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.29393115942028986" />
         <entry key="app/src/main/res/layout/puzzle_grid.xml" value="0.18026428222656252" />

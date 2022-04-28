@@ -48,12 +48,19 @@ class Puzzle() {
                 maze[row * 2 + 1][col * 2] = 1
             }
         }
+        var blankRowString = "██ ██ "
         for (row in maze) {
-            var rowString = ""
+            blankRowString += "██ "
+        }
+        Log.v("puzzling", blankRowString)
+        for (row in maze) {
+            var rowString = "██ "
             for (i in row.indices)
                 rowString += if (row[i] == 1) "██ " else "░░ "
+            rowString += "██ "
             Log.v("puzzling", rowString)
         }
+        Log.v("puzzling", blankRowString)
         Log.v("puzzling", " hi ")
     }
 

@@ -8,7 +8,7 @@
 <!--    android:layout_marginRight="@dimen/margin_medium"-->
 
     <ImageView
-        android:src="@drawable/ic_no_track"
+        android:src="@drawable/ic_blank_track"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
