@@ -12,4 +12,6 @@
     <integer name="smoke6_delay">2350</integer>
     <integer name="smoke7_delay">2500</integer>
     <integer name="smoke8_delay">2650</integer>
+    <integer name="puzzle_border">6</integer>
+    <integer name="inner_puzzle_border">2</integer>
 </resources>

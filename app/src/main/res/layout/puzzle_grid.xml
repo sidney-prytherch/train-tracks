@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:padding="1dp">
+    android:padding="0dp">
 <!--    android:layout_marginLeft="@dimen/margin_medium"-->
 <!--    android:layout_marginRight="@dimen/margin_medium"-->
 
@@ -15,4 +15,13 @@
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        />
 </FrameLayout>

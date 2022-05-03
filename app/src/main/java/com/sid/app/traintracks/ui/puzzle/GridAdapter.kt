@@ -1,50 +1,52 @@
-package com.sid.app.traintracks.ui.gallery
+package com.sid.app.traintracks.ui.puzzle
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sid.app.traintracks.R
 
 
-class GridAdapter(private val mDataSet: Array<Int>) :
+class GridAdapter(private val mDataSet: Array<Int>, private val topHints: Array<Int>, private val leftHints: Array<Int>) :
     RecyclerView.Adapter<GridAdapter.ViewHolder>() {
 
-    var selectedPosition: Int? = null
+    private var selectedPosition: Int? = null
     private val selectedToUnselectedDrawable = mapOf(
         R.drawable.ic_blank_track_selected to R.drawable.ic_blank_track,
+        R.drawable.ic_no_track_selected to R.drawable.ic_no_track,
+        R.drawable.ic_yes_track_selected to R.drawable.ic_yes_track,
         R.drawable.ic_straight_track_horizontal_selected to R.drawable.ic_straight_track_horizontal,
         R.drawable.ic_straight_track_vertical_selected to R.drawable.ic_straight_track_vertical,
         R.drawable.ic_corner_track_ne_selected to R.drawable.ic_corner_track_ne,
         R.drawable.ic_corner_track_nw_selected to R.drawable.ic_corner_track_nw,
         R.drawable.ic_corner_track_se_selected to R.drawable.ic_corner_track_se,
-        R.drawable.ic_corner_track_sw_selected to R.drawable.ic_corner_track_sw
+        R.drawable.ic_corner_track_sw_selected to R.drawable.ic_corner_track_sw,
+        R.drawable.ic_north_track_selected to R.drawable.ic_north_track,
+        R.drawable.ic_east_track_selected to R.drawable.ic_east_track,
+        R.drawable.ic_south_track_selected to R.drawable.ic_south_track,
+        R.drawable.ic_west_track_selected to R.drawable.ic_west_track
     )
     private val unselectedToSelectedDrawable = mapOf(
         R.drawable.ic_blank_track to R.drawable.ic_blank_track_selected,
+        R.drawable.ic_no_track to R.drawable.ic_no_track_selected,
+        R.drawable.ic_yes_track to R.drawable.ic_yes_track_selected,
         R.drawable.ic_straight_track_horizontal to R.drawable.ic_straight_track_horizontal_selected,
         R.drawable.ic_straight_track_vertical to R.drawable.ic_straight_track_vertical_selected,
         R.drawable.ic_corner_track_ne to R.drawable.ic_corner_track_ne_selected,
         R.drawable.ic_corner_track_nw to R.drawable.ic_corner_track_nw_selected,
         R.drawable.ic_corner_track_se to R.drawable.ic_corner_track_se_selected,
-        R.drawable.ic_corner_track_sw to R.drawable.ic_corner_track_sw_selected
+        R.drawable.ic_corner_track_sw to R.drawable.ic_corner_track_sw_selected,
+        R.drawable.ic_north_track to R.drawable.ic_north_track_selected,
+        R.drawable.ic_east_track to R.drawable.ic_east_track_selected,
+        R.drawable.ic_south_track to R.drawable.ic_south_track_selected,
+        R.drawable.ic_west_track to R.drawable.ic_west_track_selected
     )
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        val imageView: ImageView
-
-        init {
-            // Define click listener for the ViewHolder's View.
-            v.setOnClickListener {
-                Log.d(
-                    TAG,
-                    "Element $adapterPosition clicked."
-                )
-            }
-            imageView = v.findViewById<View>(R.id.imageView) as ImageView
-        }
+        val imageView: ImageView = v.findViewById<View>(R.id.imageView) as ImageView
+        val textView: TextView = v.findViewById<View>(R.id.hint) as TextView
     }
 
     private fun selectItem(position: Int) {
@@ -77,16 +79,24 @@ class GridAdapter(private val mDataSet: Array<Int>) :
     // BEGIN_INCLUDE(recyclerViewOnBindViewHolder)
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        Log.d(TAG, "Element $position set.")
+        val pos: Int = position
+        val size = 10
 
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
-        viewHolder.imageView.setImageResource(mDataSet[position])
-        viewHolder.imageView.setOnClickListener {
-            selectedPosition?.let { pos -> unselectItem(pos) }
-            selectItem(position)
-            selectedPosition = position
-            viewHolder.imageView.setImageResource(mDataSet[position])
+        viewHolder.imageView.setImageResource(mDataSet[pos])
+        if (pos % size != 0 && pos > size && pos < size * (size - 1) && (pos - (size - 1)) % size != 0) {
+            viewHolder.imageView.setOnClickListener {
+                selectedPosition?.let { pos -> unselectItem(pos) }
+                selectItem(pos)
+                selectedPosition = pos
+                viewHolder.imageView.setImageResource(mDataSet[pos])
+            }
+        }
+        if (pos in 1 until size - 1) {
+            viewHolder.textView.text = topHints[pos - 1].toString()
+        } else if (pos % size == 0 && pos in 1 until ((size - 1) * size)) {
+            viewHolder.textView.text = leftHints[pos / 10 - 1].toString()
         }
     }
 

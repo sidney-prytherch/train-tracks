@@ -1,4 +1,4 @@
-package com.sid.app.traintracks.ui.gallery
+package com.sid.app.traintracks.ui.puzzle
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -15,15 +15,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-import com.sid.app.traintracks.databinding.FragmentGalleryBinding
+import com.sid.app.traintracks.databinding.FragmentPuzzleBinding
 import com.sid.app.traintracks.R
 import com.sid.app.traintracks.helper.Puzzle
 
 
-class GalleryFragment : Fragment() {
+class PuzzleFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
+    private lateinit var puzzleViewModel: PuzzleViewModel
+    private var _binding: FragmentPuzzleBinding? = null
 
 
     // This property is only valid between onCreateView and
@@ -31,28 +31,34 @@ class GalleryFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
-        galleryViewModel =
-            ViewModelProvider(this)[GalleryViewModel::class.java]
+        puzzleViewModel =
+            ViewModelProvider(this)[PuzzleViewModel::class.java]
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentPuzzleBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            binding.textGallery.text = it
+        puzzleViewModel.text.observe(viewLifecycleOwner) {
+            binding.textPuzzle.text = it
         }
 
-        val animR: AnimatedVectorDrawableCompat? = AnimatedVectorDrawableCompat.create(binding.trainImage.context, R.drawable.animated_train)
+        val animR: AnimatedVectorDrawableCompat? = AnimatedVectorDrawableCompat.create(
+            binding.trainImage.context,
+            R.drawable.animated_train
+        )
         animR?.let {
             binding.trainImage.setImageDrawable(it)
         }
         (binding.trainImage.drawable as Animatable?)?.start()
 
 
-        val smokeAnim: AnimatedVectorDrawableCompat? = AnimatedVectorDrawableCompat.create(binding.smokeImage.context, R.drawable.animated_smoke1)
+        val smokeAnim: AnimatedVectorDrawableCompat? = AnimatedVectorDrawableCompat.create(
+            binding.smokeImage.context,
+            R.drawable.animated_smoke1
+        )
         smokeAnim?.let {
             binding.smokeImage.setImageDrawable(it)
         }
@@ -64,7 +70,7 @@ class GalleryFragment : Fragment() {
         val longAnimation = resources.getInteger(R.integer.animation_long).toLong()
         val veryLongAnimation = resources.getInteger(R.integer.animation_very_long).toLong()
         val shortAnimation = resources.getInteger(R.integer.animation_short).toLong()
-        val dip = resources.getDimension(R.dimen.train_length) * -1 -10
+        val dip = resources.getDimension(R.dimen.train_length) * -1 - 10
         val resources: Resources = resources
         val px = TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
@@ -99,12 +105,55 @@ class GalleryFragment : Fragment() {
                 .setListener(null)
         }
 
-        val adapter = GridAdapter(Array(64){R.drawable.ic_blank_track})
-        binding.gridLayout.layoutManager = GridLayoutManager(context, 8)
+        val gridSize = 10
+        val grid = Array(gridSize * gridSize) { R.drawable.ic_blank_track }
+        val path = Puzzle().generateMaze(gridSize - 2)
+        val topHints = Array(gridSize - 2) { 0 }
+        val leftHints = Array(gridSize - 2) { 0 }
+        for (i in 1 until path.size - 1) {
+            topHints[path[i].second]++
+            leftHints[path[i].first]++
+        }
+        for (i in 1 until gridSize - 1) {
+            grid[0 * gridSize + i] = R.drawable.ic_blank_bottom
+            grid[i * gridSize + 0] = R.drawable.ic_blank_right
+            grid[(gridSize - 1) * gridSize + i] = R.drawable.ic_blank_top
+            grid[i * gridSize + gridSize - 1] = R.drawable.ic_blank_left
+        }
+        grid[0] = R.drawable.ic_blank_bottomright
+        grid[gridSize - 1] = R.drawable.ic_blank_bottomleft
+        grid[gridSize * gridSize - 1] = R.drawable.ic_blank_topleft
+        grid[(gridSize - 1) * gridSize] = R.drawable.ic_blank_topright
+        for (cell in path) {
+            grid[(cell.first + 1) * gridSize + cell.second + 1] = when (cell.third) {
+//                -1 -> R.drawable.ic_straight_track_vertical
+//                -2 -> R.drawable.ic_straight_track_horizontal
+//                -3 -> R.drawable.ic_corner_track_ne
+//                -4 -> R.drawable.ic_corner_track_se
+//                -5 -> R.drawable.ic_corner_track_sw
+//                -6 -> R.drawable.ic_corner_track_nw
+                -7 -> R.drawable.ic_east_track_start
+                -8 -> R.drawable.ic_north_track_start
+                -9 -> R.drawable.ic_west_track_start
+                -10 -> R.drawable.ic_south_track_start
+                else -> R.drawable.ic_blank_track
+            }
+        }
+
+        val adapter = GridAdapter(grid, topHints, leftHints)
+        binding.gridLayout.layoutManager = GridLayoutManager(context, gridSize)
         binding.gridLayout.adapter = adapter
 
         binding.delete.setOnClickListener {
             adapter.setTrackDrawable(R.drawable.ic_blank_track_selected)
+        }
+
+        binding.noTrack.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_no_track_selected)
+        }
+
+        binding.yesTrack.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_yes_track_selected)
         }
 
         binding.cornerNE.setOnClickListener {
@@ -131,8 +180,21 @@ class GalleryFragment : Fragment() {
             adapter.setTrackDrawable(R.drawable.ic_straight_track_vertical_selected)
         }
 
-        val puzzle = Puzzle()
-        puzzle.generateMaze(8)
+        binding.north.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_north_track_selected)
+        }
+
+        binding.east.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_east_track_selected)
+        }
+
+        binding.south.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_south_track_selected)
+        }
+
+        binding.west.setOnClickListener {
+            adapter.setTrackDrawable(R.drawable.ic_west_track_selected)
+        }
 
 
         return root

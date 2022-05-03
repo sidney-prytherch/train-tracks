@@ -6,55 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/train_image"
         android:layout_width="0dp"
-        android:scaleType="fitCenter"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1"
-        app:srcCompat="@drawable/animated_train"
         android:contentDescription="@string/del"
+        android:scaleType="fitCenter"
         android:scaleX="-1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_home" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animated_train" />
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent=".46"
-        app:layout_constraintVertical_bias=".46"
         android:gravity="center"
-        android:text="start"
+        android:text="@string/start"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@id/train_image"
         app:layout_constraintStart_toStartOf="@id/train_image"
         app:layout_constraintTop_toTopOf="@id/train_image"
-        app:layout_constraintBottom_toBottomOf="@id/train_image"/>
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintVertical_bias=".46" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/train_image"
-        app:layout_constraintBottom_toBottomOf="@id/train_image"
         android:background="@drawable/train_button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/train_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/train_image" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

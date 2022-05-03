@@ -19,13 +19,8 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.sid.app.traintracks.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="com.sid.app.traintracks.ui.puzzle.PuzzleFragment"
+        android:label="@string/menu_puzzle"
+        tools:layout="@layout/fragment_puzzle" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.sid.app.traintracks.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>

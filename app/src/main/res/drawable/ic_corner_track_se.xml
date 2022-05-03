@@ -28,4 +28,9 @@
             android:pathData="M11.402,-0.051l77.274,20.706l-4.141,15.455l-77.274,-20.706z"
             android:fillColor="@color/tracks"/>
     </group>
+    <path
+        android:fillAlpha="0"
+        android:pathData="M0,0h100v100h-100z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/black" />
 </vector>

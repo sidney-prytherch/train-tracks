@@ -15,4 +15,9 @@
   <path
       android:fillColor="@color/tracks"
       android:pathData="M8,8h84v16h-84z"/>
+  <path
+      android:fillAlpha="0"
+      android:pathData="M0,0h100v100h-100z"
+      android:strokeWidth="@integer/inner_puzzle_border"
+      android:strokeColor="@color/black" />
 </vector>

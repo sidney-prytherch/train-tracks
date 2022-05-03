@@ -1,13 +1,13 @@
-package com.sid.app.traintracks.ui.slideshow
+package com.sid.app.traintracks.ui.puzzle
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class PuzzleViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

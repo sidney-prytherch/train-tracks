@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.traintwo"
+        applicationId "com.sid.app.traintracks"
         minSdk 21
         targetSdk 32
         versionCode 1

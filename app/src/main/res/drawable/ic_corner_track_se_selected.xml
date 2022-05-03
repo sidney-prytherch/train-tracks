@@ -34,4 +34,9 @@
         android:strokeWidth="10"
         android:fillAlpha="0"
         android:strokeColor="@color/selected"/>
+    <path
+        android:fillAlpha="0"
+        android:pathData="M0,0h100v100h-100z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/black" />
 </vector>

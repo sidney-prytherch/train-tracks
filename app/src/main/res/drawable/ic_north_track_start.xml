@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <path
+      android:pathData="M0,0h100v100h-100z"
+      android:fillColor="#ffffff"/>
+  <path
+      android:fillColor="@color/tracks"
+      android:pathData="M20,0h16v32h-16z"/>
+  <path
+      android:fillColor="@color/tracks"
+      android:pathData="M64,0h16v32h-16z"/>
+  <path
+      android:fillColor="@color/tracks"
+      android:pathData="M8,8h84v16h-84z"/>
+  <path
+      android:fillAlpha="0"
+      android:strokeWidth="@integer/puzzle_border"
+      android:pathData="M0,0h100v0h"
+      android:strokeColor="@color/black" />
+</vector>
