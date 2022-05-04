@@ -2,6 +2,8 @@ package com.sid.app.traintracks
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_gallery), drawerLayout)
+                R.id.nav_home, R.id.nav_puzzle), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -41,6 +43,36 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.action_howtoplay -> {
+                openDialog(true)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun openDialog(displayFirst: Boolean) {
+        val builder = AlertDialog.Builder(this)
+        builder
+            .setTitle(R.string.how_to_play)
+            .setMessage(R.string.how_to_play_explanation2)
+            .setNegativeButton(R.string.close) { dialog, _ ->
+                dialog.cancel()
+            }
+        if (displayFirst) {
+            builder
+                .setPositiveButton(R.string.next) { dialog, _ ->
+                    dialog.cancel()
+                    openDialog(false)
+                }
+                .setMessage(R.string.how_to_play_explanation)
+        }
+        val alert = builder.create()
+        alert.show()
     }
 
     override fun onSupportNavigateUp(): Boolean {

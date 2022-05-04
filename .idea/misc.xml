@@ -108,10 +108,14 @@
         <entry key="app/src/main/res/drawable/ic_yes_track.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/ic_yes_track_selected.xml" value="0.242" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.225" />
+        <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.263" />
         <entry key="app/src/main/res/drawable/train_button.xml" value="0.225" />
         <entry key="app/src/main/res/layout-land/fragment_puzzle.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15243399339933994" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.15243399339933994" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.26528371175130194" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_how_to_play_dialog.xml" value="0.10911458333333333" />
         <entry key="app/src/main/res/layout/fragment_puzzle.xml" value="0.11639063738394476" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.29393115942028986" />

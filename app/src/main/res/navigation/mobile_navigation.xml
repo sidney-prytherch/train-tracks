@@ -9,18 +9,23 @@
         android:id="@+id/nav_home"
         android:name="com.sid.app.traintracks.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_nav_home_to_nav_gallery"
-            app:destination="@id/nav_gallery"
+            android:id="@+id/action_nav_home_to_nav_puzzle"
+            app:destination="@id/nav_puzzle"
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_puzzle"
         android:name="com.sid.app.traintracks.ui.puzzle.PuzzleFragment"
         android:label="@string/menu_puzzle"
-        tools:layout="@layout/fragment_puzzle" />
-
+        tools:layout="@layout/fragment_puzzle" >
+        <action
+            android:id="@+id/action_nav_puzzle_to_nav_home2"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim" />
+    </fragment>
 </navigation>

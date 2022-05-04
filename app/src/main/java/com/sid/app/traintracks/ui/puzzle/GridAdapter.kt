@@ -5,11 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.sid.app.traintracks.R
 
 
-class GridAdapter(private val mDataSet: Array<Int>, private val topHints: Array<Int>, private val leftHints: Array<Int>) :
+class GridAdapter(private val mDataSet: LiveData<Array<Int>>, private val topHints: Array<Int>, private val leftHints: Array<Int>) :
     RecyclerView.Adapter<GridAdapter.ViewHolder>() {
 
     private var selectedPosition: Int? = null
@@ -50,18 +52,34 @@ class GridAdapter(private val mDataSet: Array<Int>, private val topHints: Array<
     }
 
     private fun selectItem(position: Int) {
-        mDataSet[position] = unselectedToSelectedDrawable[mDataSet[position]] ?: mDataSet[position]
+        val currentValue = mDataSet.value?.get(position)
+        (unselectedToSelectedDrawable[currentValue] ?: currentValue)?.let {
+            mDataSet.value?.set(position,
+                it
+            )
+        }
         notifyItemChanged(position)
     }
 
     private fun unselectItem(position: Int) {
-        mDataSet[position] = selectedToUnselectedDrawable[mDataSet[position]] ?: mDataSet[position]
+        val currentValue = mDataSet.value?.get(position)
+        (selectedToUnselectedDrawable[currentValue] ?: currentValue)?.let {
+            mDataSet.value?.set(position,
+                it
+            )
+        }
         notifyItemChanged(position)
+    }
+
+    fun unselectTrack() {
+        selectedPosition?.let {
+            unselectItem(it)
+        }
     }
 
     fun setTrackDrawable(drawable: Int) {
         selectedPosition?.let {
-            mDataSet[it] = drawable
+            mDataSet.value?.set(it, drawable)
             notifyItemChanged(it)
         }
     }
@@ -84,13 +102,13 @@ class GridAdapter(private val mDataSet: Array<Int>, private val topHints: Array<
 
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
-        viewHolder.imageView.setImageResource(mDataSet[pos])
+        viewHolder.imageView.setImageResource(mDataSet.value?.get(pos) ?: 0)
         if (pos % size != 0 && pos > size && pos < size * (size - 1) && (pos - (size - 1)) % size != 0) {
             viewHolder.imageView.setOnClickListener {
                 selectedPosition?.let { pos -> unselectItem(pos) }
                 selectItem(pos)
                 selectedPosition = pos
-                viewHolder.imageView.setImageResource(mDataSet[pos])
+                viewHolder.imageView.setImageResource(mDataSet.value?.get(pos) ?: 0)
             }
         }
         if (pos in 1 until size - 1) {
@@ -103,7 +121,7 @@ class GridAdapter(private val mDataSet: Array<Int>, private val topHints: Array<
     // END_INCLUDE(recyclerViewOnBindViewHolder)
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount(): Int {
-        return mDataSet.size
+        return mDataSet.value?.size ?: 100
     }
 
     companion object {
